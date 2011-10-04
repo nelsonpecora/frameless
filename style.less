@@ -1,0 +1,327 @@
+@import 'helpful-LESS-functions.less';
+
+/* CONFIGURATION */
+
+@font-size: 16px; 		// Your base font-size in pixels
+@em: @font-size*1em;	// Shorthand for outputting ems, e.g. "12/@em"
+@txt: @font-size;
+
+@column: 68px;	// The column-width of your grid in pixels
+@gutter: 24px;	// The gutter-width of your grid in pixels
+
+/*
+	For reference, here are the outer margins:
+	(d_ = default, t_ = tablet, m_ = mobile, wm_ = wide mobile)
+*/	
+	
+@d_margin: 48px;
+@t_margin: 28px;
+@m_margin: 34px;
+@wm_margin: 22px;
+
+/* Selection stuff */
+
+::selection {
+	background: red;
+	color: white;
+}
+::-moz-selection {
+	background: red;
+	color: white;
+}
+
+img::selection {
+	background: transparent;
+}
+img::-moz-selection {
+	background: transparent;
+}
+
+body {
+	-webkit-tap-highlight-color: rgba(255,0,0, 0.62);
+}
+
+/* END CONFIGURATION */
+
+/*
+	Column-widths in variables, in px
+*/
+
+@1cols: ( 1 * (@column + @gutter) - @gutter); @1col: @1cols;
+@2cols: ( 2 * (@column + @gutter) - @gutter);
+@3cols: ( 3 * (@column + @gutter) - @gutter);
+@4cols: ( 4 * (@column + @gutter) - @gutter);
+@5cols: ( 5 * (@column + @gutter) - @gutter);
+@6cols: ( 6 * (@column + @gutter) - @gutter);
+@7cols: ( 7 * (@column + @gutter) - @gutter);
+@8cols: ( 8 * (@column + @gutter) - @gutter);
+@9cols: ( 9 * (@column + @gutter) - @gutter);
+@10cols: (10 * (@column + @gutter) - @gutter);
+
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, nav, section, audio, canvas, video {
+	display: block;
+}
+
+html {
+	height: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+}
+
+	body {min-height: 100%; font-size: 100%;}
+
+sub, sup {
+	font-size: 75%; 
+	line-height: 0; 
+	position: relative; 
+	vertical-align: baseline;
+}
+
+	sup {top: -0.5em;}
+	sub {bottom: -0.25em;}
+
+pre {
+	white-space: pre; 
+	white-space: pre-wrap; 
+	word-wrap: break-word;
+}
+
+b, strong {font-weight: bold;}
+abbr[title] {border-bottom: 1px dotted;}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a img, img {
+	-ms-interpolation-mode: bicubic;
+	border: 0;
+}
+
+input, textarea, button, select {
+	margin: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: baseline;
+}
+
+	button,
+	html input[type="button"], 
+	input[type="reset"], 
+	input[type="submit"] {
+	    cursor: pointer;
+	    -webkit-appearance: button;
+	}
+	
+	input[type="checkbox"],
+	input[type="radio"] {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			 -o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	
+	textarea {overflow: auto;}
+	
+/*
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
+*/
+
+.ie {
+	
+}
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 6.875*@txt;
+	line-height: 7.5*@txt;
+	letter-spacing: -@txt/-8;
+}
+
+h1, .huge {
+	font-size: 4.25*@txt;
+	line-height: 4.5*@txt;
+	letter-spacing: @txt/-16;
+}
+
+h2, .large {
+	font-size: 2.625*@txt;
+	line-height: 3*@txt;
+}
+
+h3, .bigger {
+	font-size: 1.625*@txt;
+	line-height: 2.25*@txt;
+}
+
+h4, .big {
+	font-size: 1.375*@txt;
+	line-height: 1.875*@txt;
+}
+
+body {
+	font: @txt Georgia, serif; //make this typekit-y
+}
+
+small, .small {
+	font-size: 0.8125*@txt;
+	line-height: 1.125*@txt;
+}
+
+/* 
+	LAYOUTS
+*/
+
+/*		Default Layout: 992px.
+		Columns: 10. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+	//width: 896px;
+	//width: @10cols;
+	padding: 72px 48px 84px;
+	background: rgb(232,232,232);
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+#wrap { width: @10cols; margin: 0 auto; border: 1px dashed #aaa; }
+
+#top {
+	width: @10cols;
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+#left {
+	width: -2px + @6cols;
+	position: relative;
+	float: left;
+	clear: both;
+	border: 1px solid grey;
+}
+
+#right {
+	width: -2px + @4cols;
+	position: relative;
+	float: left;
+	margin-left: 24px;
+	border: 1px dotted #333;
+}
+
+/*		Tablet Layout: 768px.
+		Columns: 8.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		//width: 712px;
+		//width: @8cols;
+		padding: 48px 28px 60px;
+	}
+	
+	#wrap { width: @8cols; }
+	#top { width: @8cols; margin-bottom: 12px;}
+	#left { width: -2px + @5cols; }
+	#right { width: -2px + @3cols; }
+	
+	
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Columns: 3.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		//width: 252px;
+		//width: @3cols;
+		padding: 48px 34px 60px;
+	}
+	
+	#wrap { width: @3cols; }
+	#top {
+		width: @3cols; 
+		margin-bottom: 8px;
+	}
+	#left { width: @3cols; }
+	#right { width: @3cols; margin: 0;}
+	h1 { .large }
+	h2 { .bigger }
+	h3 { .big }
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Columns: 5.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+		//width: 436px;
+		//width: @5cols;
+		padding: 36px 22px 48px;
+	}
+	
+	#wrap { width: @5cols; }
+	#top {
+		width: @5cols; 
+		margin-bottom: 12px;
+	}
+	#left { width: -2px + @3cols; }
+	#right { width: -2px + @2cols; margin-left: 24px;}
+	
+}
+
