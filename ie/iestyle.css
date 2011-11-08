@@ -1,0 +1,152 @@
+body, div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+}
+
+body {
+	font-size: 16px;
+	background-image: url('bgnoise.gif');
+	background-color: #F7F7F7;
+	color: #333;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+}
+
+#question {
+	margin: 0 auto;
+	color: #666;
+	font-size: 4.5em;
+	width: 80%;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+#answer {
+	margin: 0 auto;
+	font-size: 9em;
+	width: 180px;
+	font-weight: bolder;
+	font-family: "Impact";
+	text-transform: uppercase;
+	margin-top: 70px;
+}
+
+#pleaseupdate {
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 565px;
+	color: #666;
+	font-size: 1.2em;
+}
+
+#browsers {
+	margin: 40px auto;
+	width: 950px;
+	height: 350px;
+	position: relative;
+}
+
+#browsers a {
+	text-decoration: none;
+	color: #333;
+}
+
+.browser {
+	width: 290px;
+	height: 350px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+}
+
+.browser:hover {
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	background: #eee;
+	cursor: pointer;
+}
+
+#firefox {
+	left: 0;
+}
+
+#chrome {
+	left: 330px;
+	padding-top: 18px;
+}
+
+#safari {
+	left: 660px;
+}
+
+.name {
+	position: absolute;
+	top: 260px;
+	width: 290px;
+	font-size: 2.1em;
+	font-style: italic;
+	font-weight: bold;
+	
+}
+
+.desc {
+	position: absolute;
+	top: 300px;
+	width: 270px;
+	left: 10px;
+}
+
+#else {
+	margin: 60px auto;
+	width: 700px;
+	height: 66px;
+	text-align: left;
+	position: relative;
+	font-style: italic;
+}
+
+#else a {
+	text-decoration: none;
+	color: #333;
+}
+
+.iedesc {
+	padding-top: 20px;
+	margin-left: 35px;
+}
+
+#else:hover {
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	background: #eee;
+	cursor: pointer;
+}
+
+.iename {
+	font-weight: bold;
+}
+
+#else img {
+	position: absolute;
+	right: 14px;
+	top: 0px;
+}
+
+#footer {
+	margin: 10px auto;
+	width: 600px;
+	text-align: center;
+	font-size: 0.9em;
+	color: #bbb;
+}
+
+#footer a, #footer a:active, #footer a:visited {
+	color: #bbb;
+}
+
+#footer a:hover {
+	color: #999;
+}
