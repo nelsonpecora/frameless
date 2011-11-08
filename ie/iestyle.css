@@ -5,6 +5,10 @@ body, div {
 	display: block;
 }
 
+a img, a img:hover, a img:active, a img:visited {
+	border: none;
+}
+
 body {
 	font-size: 16px;
 	background-image: url('bgnoise.gif');
