@@ -7,6 +7,11 @@ body, div {
 
 a img, a img:hover, a img:active, a img:visited {
 	border: none;
+	outline: none;
+}
+
+a:active, a:visited {
+	outline: none;
 }
 
 body {
