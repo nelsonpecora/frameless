@@ -2,6 +2,9 @@
 
 /* CONFIGURATION */
 
+@hdrfont: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+@bdyfont: goudy-bookletter-1911-1,goudy-bookletter-1911-2, serif;
+
 @font-size: 16px; 		// Your base font-size in pixels
 @em: @font-size*1em;	// Shorthand for outputting ems, e.g. "12/@em"
 @txt: @font-size;
@@ -153,36 +156,51 @@ input, textarea, button, select {
 	font-size: 6.875*@txt;
 	line-height: 7.5*@txt;
 	letter-spacing: -@txt/-8;
+	font-family: @hdrfont;
+	font-weight: bolder;
 }
 
 h1, .huge {
 	font-size: 4.25*@txt;
 	line-height: 4.5*@txt;
 	letter-spacing: @txt/-16;
+	font-family: @hdrfont;
+	font-weight: bolder;
 }
 
 h2, .large {
 	font-size: 2.625*@txt;
 	line-height: 3*@txt;
+	font-family: @hdrfont;
+	font-weight: bold;
 }
 
 h3, .bigger {
 	font-size: 1.625*@txt;
 	line-height: 2.25*@txt;
+	font-family: @hdrfont;
+	font-weight: bold;
 }
 
 h4, .big {
 	font-size: 1.375*@txt;
 	line-height: 1.875*@txt;
+	font-family: @hdrfont;
 }
 
 body {
-	font: @txt Georgia, serif; //make this typekit-y
+	font: @txt @bdyfont; //make this typekit-y
 }
 
 small, .small {
 	font-size: 0.8125*@txt;
 	line-height: 1.125*@txt;
+	font-family: @bdyfont;
+}
+
+hr {
+	height: 0px;
+	border: 3px solid #666;
 }
 
 /* 
@@ -202,17 +220,18 @@ body {
 	//width: 896px;
 	//width: @10cols;
 	padding: 72px 48px 84px;
-	background: rgb(232,232,232);
+	//background: rgb(232,232,232);
+	background-image: url(images/project_papper.png);
 	color: rgb(60,60,60);
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
 
-#wrap { width: @10cols; margin: 0 auto; border: 1px dashed #aaa; }
+#wrap { width: @10cols; margin: 0 auto; }
 
 #top {
 	width: @10cols;
 	text-align: center;
-	margin-bottom: 24px;
+	margin-bottom: 42px;
 }
 
 #left {
@@ -220,7 +239,6 @@ body {
 	position: relative;
 	float: left;
 	clear: both;
-	border: 1px solid grey;
 }
 
 #right {
@@ -228,7 +246,6 @@ body {
 	position: relative;
 	float: left;
 	margin-left: 24px;
-	border: 1px dotted #333;
 }
 
 /*		Tablet Layout: 768px.
