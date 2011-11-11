@@ -188,8 +188,8 @@ h4, .big {
 	font-family: @hdrfont;
 }
 
-body {
-	font: @txt @bdyfont; //make this typekit-y
+body, body p {
+	font: @txt @bdyfont;
 }
 
 small, .small {
@@ -201,6 +201,7 @@ small, .small {
 hr {
 	height: 0px;
 	border: 3px solid #666;
+	margin-bottom: 42px;
 }
 
 /* 
@@ -239,13 +240,19 @@ body {
 	position: relative;
 	float: left;
 	clear: both;
+	p { margin-top: 24px; font-size: 24px; }
 }
 
 #right {
 	width: -2px + @4cols;
 	position: relative;
 	float: left;
-	margin-left: 24px;
+	margin-left: 22px;
+	border: 1px solid #aaa;
+	border-radius: 6px;
+	background-color: rgba(200, 200, 200, .25);
+	text-align: center;
+	padding: 8px 0 8px 0;
 }
 
 /*		Tablet Layout: 768px.
@@ -265,9 +272,14 @@ px      68    160    252    344    436    528    620    712    */
 		padding: 48px 28px 60px;
 	}
 	
+	hr { margin-bottom: 36px; }
+	
 	#wrap { width: @8cols; }
 	#top { width: @8cols; margin-bottom: 12px;}
-	#left { width: -2px + @5cols; }
+	#left { 
+		width: -2px + @5cols;
+		p { margin-top: 16px; font-size: 20px; }
+	}
 	#right { width: -2px + @3cols; }
 	
 	
@@ -292,13 +304,23 @@ px      68    160    252    */
 		padding: 48px 34px 60px;
 	}
 	
+	hr { margin-bottom: 24px; }
+	
 	#wrap { width: @3cols; }
 	#top {
 		width: @3cols; 
 		margin-bottom: 8px;
 	}
-	#left { width: @3cols; }
-	#right { width: @3cols; margin: 0;}
+	#left { 
+		width: @3cols;
+		margin-top: 24px;
+		p { margin-top: 8px; font-size: 16px; }
+	}
+	#right { 
+		width: @3cols;
+		margin: 0;
+		margin-top: 32px;
+	}
 	h1 { .large }
 	h2 { .bigger }
 	h3 { .big }
@@ -328,8 +350,23 @@ px      68    160    252    344    436    */
 		width: @5cols; 
 		margin-bottom: 12px;
 	}
-	#left { width: -2px + @3cols; }
-	#right { width: -2px + @2cols; margin-left: 24px;}
+	#left { 
+		width: -2px + @3cols;
+		margin-top: 0px;
+		p { margin-top: 12px; font-size: 18px; }
+	}
+	#right { width: -2px + @2cols; margin-left: 24px; margin-top: 0px;
+	}
 	
 }
 
+a {
+	text-decoration: none;
+	color: #444;
+	text-shadow: 0.5px 0.5px #333;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #333;
+}
