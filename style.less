@@ -297,6 +297,84 @@ body {
 	p { font-size: 18px; }
 }
 
+.portsquare {
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin-top: 42px;
+	border: 2px solid #333;
+	border-radius: 3px;
+	padding: 0;
+	-moz-box-shadow: 0px 0px 1px 1px #333;
+	-webkit-box-shadow: 0px 0px 1px 1px #333;
+	box-shadow: 0px 0px 1px 1px #333;
+}
+
+.portsquare:nth-of-type(2n-1) {
+	margin-left: 110px;
+}
+
+.portsquare:nth-of-type(2n) {
+	margin-left: 68px;
+}
+
+.portsquare a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+
+.portsquare a:hover {
+	background: none;
+}
+
+.portsquare a:hover img {
+	-moz-box-shadow: 0px 0px 3px 3px #222;
+	-webkit-box-shadow: 0px 0px 3px 3px #222;
+	box-shadow: 0px 0px 3px 3px #222;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	-ms-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+.portsquare img {
+	width: 300px;
+	height: 300px;
+	z-index: 80;
+}
+
+.portsquare a div {
+	display: none;
+	height: 240px;
+	padding-top: 60px;
+	position: absolute;
+	text-decoration: none;
+	width: 300px;
+	z-index: 100;
+	background-color: rgba(15, 15, 15, 0.8);
+	color: #fff;
+	text-shadow: #000 0px 0px 20px;
+	font: 24px ~"ubuntu-condensed-1, ubuntu-condensed-2", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: bold;
+}
+
+.portsquare a div p {
+	font: 14px ~"ubuntu-condensed-1, ubuntu-condensed-2", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: normal;
+	text-shadow: #000 0px 0px 20px;
+	text-align: left;
+	margin: 18px;
+}
+
+#portbottom {
+	margin-top: 42px;
+	float: left;
+	clear: left;
+}
+
 nav {
 	width: @8cols;
 	margin: 0 auto;
@@ -457,6 +535,23 @@ px      68    160    252    344    436    528    620    712    */
 		ul.skilllist li { margin-bottom: 4px; }
 		p.resumeBottom { font-size: 14px; margin-top: 22px; }
 	}
+	
+	#center-portfolio {
+		width: @8cols;
+		p { font-size: 16px; }
+	}
+	
+	.portsquare {
+		margin-top: 36px;
+	}
+	
+	.portsquare:nth-of-type(2n-1) {
+		margin-left: 31px;
+	}
+	
+	.portsquare:nth-of-type(2n) {
+		margin-left: 42px;
+	}
 	footer { width: @8cols; margin-top: 75px; }
 	
 	
@@ -527,6 +622,24 @@ px      68    160    252    */
 	h1 { .large }
 	h2 { .bigger }
 	h3 { .big }
+	
+	#center-portfolio {
+		width: @3cols;
+		margin-top: 274px;
+		p { font-size: 16px; }
+	}
+	
+	.portsquare {
+		margin-top: 42px;
+	}
+	
+	.portsquare:nth-of-type(2n-1) {
+		margin-left: -24px;
+	}
+	
+	.portsquare:nth-of-type(2n) {
+		margin-left: -24px;
+	}
 }
 
 
@@ -589,6 +702,24 @@ px      68    160    252    344    436    */
 	footer { width: @5cols; margin-top: 50px; height: 24px; }
 	#foot2 { display: inline; }
 	#foot4 { display: none; }
+	
+	#center-portfolio {
+		width: @5cols;
+		margin-top: 160px;
+		p { font-size: 18px; }
+	}
+	
+	.portsquare {
+		margin-top: 42px;
+	}
+	
+	.portsquare:nth-of-type(2n-1) {
+		margin-left: 66px;
+	}
+	
+	.portsquare:nth-of-type(2n) {
+		margin-left: 66px;
+	}
 	
 	#sidebar-nav {
 		width: @2cols + 16;
