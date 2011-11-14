@@ -26,11 +26,34 @@
 	<script type="text/javascript">
 		$.noConflict();
 		jQuery(document).ready(function($) {
-		    $('.portsquare').mouseenter(function(e) {
-		        $(this).children('a').children('div').fadeIn(200);
-		    }).mouseleave(function(e) {
-		        $(this).children('a').children('div').fadeOut(200);
-		    });
+			var userAgent = navigator.userAgent.toLowerCase();
+			var isiPhone = (userAgent.indexOf('iphone') != -1 || userAgent.indexOf('ipad') != -1 || userAgent.indexOf('ipod') != -1) ? true : false,
+				isAndroid = (userAgent.indexOf('android') != -1) ? true : false,
+				isDesktop = (isAndroid == false && isiPhone == false) ? true : false;
+			
+			if(isiPhone || isAndroid) {
+				$('.portsquare').click(function(e) {
+					if(this).hasClass('tapped') {
+						$(this).children('a').children('div').fadeOut(200);
+					} else {
+						e.preventDefault();
+						$('.tapped').children('a').children('div').fadeOut(200);
+						$('.tapped').removeClass('tapped');
+						$(this).children('a').children('div').fadeIn(200);
+						$(this).addClass('tapped');
+					}
+				});
+				$('body').click(function(e) {
+					$('.tapped').removeClass('tapped');
+				$('
+				
+			} else if (isDesktop) {
+			    $('.portsquare').mouseenter(function(e) {
+			        $(this).children('a').children('div').fadeIn(200);
+			    }).mouseleave(function(e) {
+			        $(this).children('a').children('div').fadeOut(200);
+			    });
+			}
 		});
 	</script>
 	
