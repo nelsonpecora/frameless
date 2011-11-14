@@ -6,6 +6,9 @@ RewriteCond %{HTTP_HOST} ^yoshokatana.com$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.yosho.me$ [NC]
 RewriteRule ^(.*)$ http://yosho.me$1 [R,N]
 
+RewriteCond %{HTTP_HOST} ^dev.yoshokatana.com$ [NC]
+RewriteRule ^(.*)$ http://dev.yosho.me$1 [R,N]
+
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 RewriteCond %{THE_REQUEST} ^GET\ ([^\.]+)\.(html|htm) [NC]
 RewriteRule ^([^\.]+)\.(html|htm)$ %1 [R,NC,L]
