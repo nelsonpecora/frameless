@@ -32,8 +32,9 @@
 				isDesktop = (isAndroid == false && isiPhone == false) ? true : false;
 			
 			if(isiPhone || isAndroid) {
+				/*
 				$('.portsquare').tap(function(e) {
-					if(this).hasClass('tapped') {
+					if($(this).hasClass('tapped') {
 						$(this).children('a').children('div').fadeOut(200);
 					} else {
 						e.preventDefault();
@@ -46,7 +47,7 @@
 				$('body').tap(function(e) {
 					$('.tapped').removeClass('tapped');
 				});
-				
+				*/
 			} else if (isDesktop) {
 			    $('.portsquare').mouseenter(function(e) {
 			        $(this).children('a').children('div').fadeIn(200);
