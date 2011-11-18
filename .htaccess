@@ -1,10 +1,10 @@
 Options +FollowSymlinks +Indexes
 RewriteEngine on
 
-# RewriteCond %{HTTP_HOST} ^www.yoshokatana.com$ [NC,OR]
-# RewriteCond %{HTTP_HOST} ^yoshokatana.com$ [NC,OR]
-# RewriteCond %{HTTP_HOST} ^www.yosho.me$ [NC]
-# RewriteRule ^(.*)$ http://yosho.me/$1 [R,N]
+RewriteCond %{HTTP_HOST} ^www\.yoshokatana\.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^yoshokatana\.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www\.yosho\.me$ [NC,OR]
+RewriteRule ^(.*)$ http://yosho.me/$1 [R,L]
 
 RewriteCond %{HTTP_HOST} ^dev\.yoshokatana\.com$ [NC]
 RewriteRule ^(.*)$ http://dev.yosho.me/$1 [R,L]
