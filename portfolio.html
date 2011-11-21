@@ -32,23 +32,11 @@
 				isDesktop = (isAndroid == false && isiPhone == false) ? true : false;
 			
 			if(isiPhone || isAndroid) {
-				/*
-				$('.portsquare').tap(function(e) {
-					if($(this).hasClass('tapped') {
-						$(this).children('a').children('div').fadeOut(200);
-					} else {
-						e.preventDefault();
-						$('.tapped').children('a').children('div').fadeOut(200);
-						$('.tapped').removeClass('tapped');
-						$(this).children('a').children('div').fadeIn(200);
-						$(this).addClass('tapped');
-					}
-				});
-				$('body').tap(function(e) {
-					$('.tapped').removeClass('tapped');
-				});
-				*/
+				$('.porttouch').show();
+				$('.portsquare').addClass('touch');
 			} else if (isDesktop) {
+				$('.porttouch').hide();
+				$('.portsquare').removeClass('touch');
 			    $('.portsquare').mouseenter(function(e) {
 			        $(this).children('a').children('div').fadeIn(200);
 			    }).mouseleave(function(e) {
@@ -91,10 +79,10 @@
 		<section id="center-portfolio">
 			<h3>Here are some sites I've worked on!</h3>
 			
-			<div class="portsquare"><a href="portimgs/ology.jpg" class="portlink" rel="lightbox-gallery" desc="Ology<p>Worked with two other developers to update branding and build this Drupal 7-powered social networking tool.</p>"><div class="portoverlay">Ology<p>Worked with two other developers to update branding and build this Drupal 7-powered social networking tool.</p></div><img src="portimgs/ology_t.jpg" /></a></div>
-			<div class="portsquare"><a href="portimgs/immupure.jpg" class="portlink" rel="lightbox-gallery" desc="Immupure<p>Updated the original Wordpress site to a new design. Added Google Maps-based &ldquo;Store Locations&rdquo; search, facebook integration, and ecommerce backend.</p>"><div class="portoverlay">Immupure<p>Updated the original Wordpress site to a new design. Added Google Maps-based "Store Locations" search, facebook integration, and ecommerce backend.</p></div><img src="portimgs/immupure_t.jpg" /></a></div>
-			<div class="portsquare"><a href="portimgs/jasonkim.jpg" class="portlink" rel="lightbox-gallery" desc="Jason J Kim, Oral Design<p>Heavily jQuery-animated website running on TextPattern backend. Main navigation bar uses CSS3 transitions with a Javascript fallback. Multiple image galleries with custom Lightbox implementation.</p>"><div class="portoverlay">Jason J Kim, Oral Design<p>Heavily jQuery-animated website running on TextPattern backend. Main navigation bar uses CSS3 transitions with a Javascript fallback. Multiple image galleries with custom Lightbox implementation.</p></div><img src="portimgs/jasonkim_t.jpg" /></a></div>
-			<div class="portsquare"><a href="portimgs/ccrg.jpg" class="portlink" rel="lightbox-gallery" desc="RIT CCRG<p>Most of the basic design for this site was in place. I restyled it to have a jQuery-powered horizontal navigation and updated the Drupal theme from v5.x to v6.x</p>"><div class="portoverlay">RIT CCRG<p>Most of the basic design for this site was in place. I restyled it to have a jQuery-powered horizontal navigation and updated the Drupal theme from v5.x to v6.x</p></div><img src="portimgs/ccrg_t.jpg" /></a></div>			
+			<div class="portsquare"><a href="portimgs/ology.jpg" class="portlink" rel="lightbox-gallery" desc="Ology<p>Worked with two other developers to update branding and build this Drupal 7-powered social networking tool.</p>"><div class="portoverlay">Ology<p>Worked with two other developers to update branding and build this Drupal 7-powered social networking tool.</p></div><img src="portimgs/ology_t.jpg" /></a><div id="pt1" class="porttouch"><h4>Ology</h4><p>Worked with two other developers to update branding and build this Drupal 7-powered social networking tool.</p></div></div>
+			<div class="portsquare"><a href="portimgs/immupure.jpg" class="portlink" rel="lightbox-gallery" desc="Immupure<p>Updated the original Wordpress site to a new design. Added Google Maps-based &ldquo;Store Locations&rdquo; search, facebook integration, and ecommerce backend.</p>"><div class="portoverlay">Immupure<p>Updated the original Wordpress site to a new design. Added Google Maps-based "Store Locations" search, facebook integration, and ecommerce backend.</p></div><img src="portimgs/immupure_t.jpg" /></a><div id="pt2" class="porttouch"><h4>Immupure</h4><p>Updated the original Wordpress site to a new design. Added Google Maps-based "Store Locations" search, facebook integration, and ecommerce backend.</p></div></div>
+			<div class="portsquare"><a href="portimgs/jasonkim.jpg" class="portlink" rel="lightbox-gallery" desc="Jason J Kim, Oral Design<p>Heavily jQuery-animated website running on TextPattern backend. Main navigation bar uses CSS3 transitions with a Javascript fallback. Multiple image galleries with custom Lightbox implementation.</p>"><div class="portoverlay">Jason J Kim, Oral Design<p>Heavily jQuery-animated website running on TextPattern backend. Main navigation bar uses CSS3 transitions with a Javascript fallback. Multiple image galleries with custom Lightbox implementation.</p></div><img src="portimgs/jasonkim_t.jpg" /></a><div id="pt3" class="porttouch"><h4>Jason J Kim, Oral Design</h4><p>Heavily jQuery-animated website running on TextPattern backend. Main navigation bar uses CSS3 transitions with a Javascript fallback. Multiple image galleries with custom Lightbox implementation.</p></div></div>
+			<div class="portsquare"><a href="portimgs/ccrg.jpg" class="portlink" rel="lightbox-gallery" desc="RIT CCRG<p>Most of the basic design for this site was in place. I restyled it to have a jQuery-powered horizontal navigation and updated the Drupal theme from v5.x to v6.x</p>"><div class="portoverlay">RIT CCRG<p>Most of the basic design for this site was in place. I restyled it to have a jQuery-powered horizontal navigation and updated the Drupal theme from v5.x to v6.x</p></div><img src="portimgs/ccrg_t.jpg" /></a><div id="pt4" class="porttouch"><h4>RIT CCRG</h4><p>Most of the basic design for this site was in place. I restyled it to have a jQuery-powered horizontal navigation and updated the Drupal theme from v5.x to v6.x</p></div></div>	
 			
 			<div id="portbottom"><p><strong>NOTE:</strong> Most of my recent projects are still in development / beta / under NDA. I’m working on some cool things with ExtJS and Sensha Touch right now, and I’m looking for awesome open source projects to contribute to. If you’ve got something crazy and revolutionary sitting on GitHub, let me know!</p></div>
 		</section>

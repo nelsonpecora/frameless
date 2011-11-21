@@ -308,6 +308,8 @@ body {
 	-moz-box-shadow: 0px 0px 1px 1px #333;
 	-webkit-box-shadow: 0px 0px 1px 1px #333;
 	box-shadow: 0px 0px 1px 1px #333;
+	position: relative;
+	z-index: 4;
 }
 
 .portsquare:nth-of-type(2n-1) {
@@ -512,6 +514,44 @@ footer {
 
 #foot4 { display: none; }
 
+.portsquare.touch {
+	margin-bottom: 216px;
+}
+
+.porttouch {
+	width: 276px;
+	height: 180px;
+	position: absolute;
+	top: 300px;
+	left: -2px;
+	z-index: 3;
+	border: 2px solid #333;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	padding: 0;
+	-moz-box-shadow: 0px 0px 1px 1px #333;
+	-webkit-box-shadow: 0px 0px 1px 1px #333;
+	box-shadow: 0px 0px 1px 1px #333;
+	background-color: rgba(15, 15, 15, 0.8);
+	color: #fff;
+	text-shadow: #000 0px 0px 20px;
+	font: 24px ~"ubuntu-condensed-1, ubuntu-condensed-2", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: bold;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.porttouch h4, .porttouch p {
+	text-shadow: #000 0px 0px 20px;
+	font: 24px ~"ubuntu-condensed-1, ubuntu-condensed-2", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin-bottom: 12px;
+}
+
+#pt1 h4 { margin-top: 36px; }
+#pt2 h4 { margin-top: 26px; }
+#pt3 h4 { margin-top: 8px; }
+#pt4 h4 { margin-top: 18px; }
+
 /*		Tablet Layout: 768px.
 		Columns: 8.
 		Gutters: 24px.
@@ -563,6 +603,43 @@ px      68    160    252    344    436    528    620    712    */
 	}
 	footer { width: @8cols; margin-top: 75px; }
 	
+	.portsquare.touch {
+		margin-bottom: 216px;
+	}
+	
+	.porttouch {
+		width: 276px;
+		height: 180px;
+		position: absolute;
+		top: 300px;
+		left: -2px;
+		z-index: 3;
+		border: 2px solid #333;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		padding: 0;
+		-moz-box-shadow: 0px 0px 1px 1px #333;
+		-webkit-box-shadow: 0px 0px 1px 1px #333;
+		box-shadow: 0px 0px 1px 1px #333;
+		background-color: rgba(15, 15, 15, 0.8);
+		color: #fff;
+		text-shadow: #000 0px 0px 20px;
+		font: 24px ~"ubuntu-condensed-1, ubuntu-condensed-2", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	
+	.porttouch h4, .porttouch p {
+		text-shadow: #000 0px 0px 20px;
+		font: 24px ~"ubuntu-condensed-1, ubuntu-condensed-2", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		margin-bottom: 12px;
+	}
+	
+	#pt1 h4 { margin-top: 36px; }
+	#pt2 h4 { margin-top: 26px; }
+	#pt3 h4 { margin-top: 22px; }
+	#pt4 h4 { margin-top: 32px; }
 	
 }
 
@@ -649,6 +726,42 @@ px      68    160    252    */
 	.portsquare:nth-of-type(2n) {
 		margin-left: -29px;
 	}
+	.portsquare.touch {
+		margin-bottom: 200px;
+	}
+	.porttouch {
+		width: 276px;
+		height: 180px;
+		position: absolute;
+		top: 300px;
+		left: -2px;
+		z-index: 3;
+		border: 2px solid #333;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+		padding: 0;
+		-moz-box-shadow: 0px 0px 1px 1px #333;
+		-webkit-box-shadow: 0px 0px 1px 1px #333;
+		box-shadow: 0px 0px 1px 1px #333;
+		background-color: rgba(15, 15, 15, 0.8);
+		color: #fff;
+		text-shadow: #000 0px 0px 20px;
+		font: 24px ~"ubuntu-condensed-1, ubuntu-condensed-2", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		font-weight: bold;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	
+	.porttouch h4, .porttouch p {
+		text-shadow: #000 0px 0px 20px;
+		font: 24px ~"ubuntu-condensed-1, ubuntu-condensed-2", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		margin-bottom: 12px;
+	}
+	
+	#pt1 h4 { margin-top: 36px; }
+	#pt2 h4 { margin-top: 26px; }
+	#pt3 h4 { margin-top: 22px; }
+	#pt4 h4 { margin-top: 32px; }
 }
 
 
@@ -781,5 +894,8 @@ px      68    160    252    344    436    */
 	#phone-s a {
 		font-size: 95%;
 	}
+	
+	#pt3 h4 { margin-top: 8px; }
+	#pt4 h4 { margin-top: 18px; }
 	
 }
