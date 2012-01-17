@@ -15,6 +15,8 @@ RewriteRule ^(.*)$ http://yosho.me/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^dev\.yoshokatana\.com$ [NC]
 RewriteRule ^(.*)$ http://dev.yosho.me/$1 [R=301,L]
 
+RewriteBase /
+
 RewriteCond %{HTTP_USER_AGENT} ^.*(Googlebot|Googlebot|Mediapartners|Adsbot|Feedfetcher)-?(Google|Image)? [NC]
 RewriteCond %{REQUEST_URI} !^/cgi-bin/error/503\.php [NC]
 RewriteRule .* /cgi-bin/error/503.php
