@@ -21,9 +21,9 @@ RewriteRule .* /cgi-bin/error/503.php
 
 RewriteCond %{REMOTE_HOST} !^1\.1\.1\.1
 RewriteCond %{REQUEST_URI} !^/cgi-bin/error/404\.php [NC]
-RewriteRule .* /stop-sopa [R=302]
+RewriteRule .* /stop-sopa.html [R=302,L]
 
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
-RewriteCond %{THE_REQUEST} ^GET\ ([^\.]+)\.(html|htm) [NC]
-RewriteRule ^([^\.]+)\.(html|htm)$ %1 [R=301,NC,L]
+# RewriteRule ^([^\.]+)$ $1.html [NC,L]
+# RewriteCond %{THE_REQUEST} ^GET\ ([^\.]+)\.(html|htm) [NC]
+# RewriteRule ^([^\.]+)\.(html|htm)$ %1 [R=301,NC,L]
 
