@@ -1,19 +1,19 @@
 Options +FollowSymlinks +Indexes
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} ^www\.keatsheavyindustries\.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^keatsheavyindustries\.com$ [NC]
-RewriteRule ^(.*)$ http://yosho.me/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} ^www\.keatsheavyindustries\.com$ [NC,OR]
+# RewriteCond %{HTTP_HOST} ^keatsheavyindustries\.com$ [NC]
+# RewriteRule ^(.*)$ http://yosho.me/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^www\.yoshokatana\.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^yoshokatana\.com$ [NC]
-RewriteRule ^(.*)$ http://yosho.me/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} ^www\.yoshokatana\.com$ [NC,OR]
+# RewriteCond %{HTTP_HOST} ^yoshokatana\.com$ [NC]
+# RewriteRule ^(.*)$ http://yosho.me/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^www\.yosho\.me$ [NC]
-RewriteRule ^(.*)$ http://yosho.me/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} ^www\.yosho\.me$ [NC]
+# RewriteRule ^(.*)$ http://yosho.me/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^dev\.yoshokatana\.com$ [NC]
-RewriteRule ^(.*)$ http://dev.yosho.me/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} ^dev\.yoshokatana\.com$ [NC]
+# RewriteRule ^(.*)$ http://dev.yosho.me/$1 [R=301,L]
 
 RewriteBase /
 
