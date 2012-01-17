@@ -25,4 +25,4 @@ RewriteRule .* /cgi-bin/error/503.php
  
 RewriteCond %{REMOTE_HOST} !^1\.1\.1\.1
 RewriteCond %{REQUEST_URI} !^/cgi-bin/error/404\.php [NC]
-RewriteRule .* /stop-sopa.html [R=302,L]
+RewriteRule .* /stop-sopa [R=302,L]
