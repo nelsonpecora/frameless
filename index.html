@@ -18,6 +18,16 @@
 	<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	
+	<script type="text/javascript" src="http://konami-js.googlecode.com/svn/trunk/konami.js"></script>
+	<script type="text/javascript">
+		konami = new Konami()
+		konami.code = function() {
+			alert("30 Lives added.");
+		}
+		konami.load();
+	</script>
+	
 	<script type="text/javascript">
 	
 	  var _gaq = _gaq || [];
