@@ -3,7 +3,7 @@
 /* CONFIGURATION */
 
 @hdrfont: ~"ff-nuvo-web-pro-1,ff-nuvo-web-pro-2", sans-serif;
-@bdyfont: ~"goudy-bookletter-1911-1,goudy-bookletter-1911-2", serif;
+@bdyfont: ~"ff-nuvo-web-pro-1,ff-nuvo-web-pro-2", sans-serif;
 
 @font-size: 16px; 		// Your base font-size in pixels
 @em: @font-size*1em;	// Shorthand for outputting ems, e.g. "12/@em"
@@ -219,16 +219,20 @@ hr {
 a {
 	text-decoration: none;
 	color: #222;
-	text-shadow: 0.2px 0.2px #222;
-	padding: 0 3px 0 3px;
+	-webkit-transition: text-shadow 200ms;
+	//padding-bottom: 2px;
+	//padding: 0 3px 0 3px;
 }
 
 a:hover {
 	color: #151515;
-	border-radius: 6px;
-	background-color: #c8c8c8;
-	background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#c0c0c0));
-	background: -moz-linear-gradient(top,  #ddd,  #c0c0c0);
+	text-shadow: 0px 0px 1px #222;
+	-webkit-transition: text-shadow 250ms;
+	//border-bottom: 1px dotted #222;
+	//border-radius: 6px;
+	//background-color: #c8c8c8;
+	//background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#c0c0c0));
+	//background: -moz-linear-gradient(top,  #ddd,  #c0c0c0);
 }
 
 /* 
