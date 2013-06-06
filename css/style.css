@@ -1,0 +1,1039 @@
+/**/
+/* CONFIGURATION */
+/*
+	For reference, here are the outer margins:
+	(d_ = default, t_ = tablet, m_ = mobile, wm_ = wide mobile)
+*//* Selection stuff */
+::selection {
+  background: #aaa;
+  color: white;
+}
+::-moz-selection {
+  background: #aaa;
+  color: white;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  -webkit-tap-highlight-color: rgba(170, 170, 170, 0.62);
+}
+/* END CONFIGURATION */
+/*
+	Column-widths in variables, in px
+*/
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block;
+}
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+b,
+strong {
+  font-weight: bold;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img,
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+}
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  overflow: auto;
+}
+/* IE10 responsive reset */
+@-ms-viewport {
+  width: 100%;
+  height: 100%;
+}
+/*	Typography presets
+	------------------	*/
+.gigantic {
+  font-size: 110px;
+  line-height: 120px;
+  letter-spacing: 2px;
+  font-family: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+  font-weight: bolder;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+h1,
+.huge {
+  font-size: 68px;
+  line-height: 72px;
+  letter-spacing: -1px;
+  font-family: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+  font-weight: bolder;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+h2,
+.large {
+  font-size: 42px;
+  line-height: 48px;
+  font-family: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+h3,
+.bigger {
+  font-size: 26px;
+  line-height: 36px;
+  font-family: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+h4,
+.big {
+  font-size: 22px;
+  line-height: 30px;
+  font-family: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+}
+body,
+body p {
+  font: 16px ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+}
+small,
+.small {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+}
+hr {
+  height: 0px;
+  border: 3px solid #666;
+  margin-bottom: 42px;
+  border-radius: 2px;
+}
+a {
+  text-decoration: none;
+  color: #222;
+  -webkit-transition: text-shadow 200ms;
+}
+a:hover {
+  color: #151515;
+  text-shadow: 0px 0px 1px #222;
+  -webkit-transition: text-shadow 250ms;
+}
+/* 
+	LAYOUTS
+*/
+/*		Default Layout: 992px.
+		Columns: 10. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+body {
+  padding: 72px 48px 84px;
+  background-image: /*url(images/beta_banner.png),*/ url(images/project_papper.png);
+  background-position: /*top right,*/ top left;
+  background-repeat: /*no-repeat,*/ repeat;
+  color: #3c3c3c;
+  -webkit-text-size-adjust: 100%;
+  /* Stops Mobile Safari from auto-adjusting font-sizes */
+
+}
+#wrap {
+  width: 896px;
+  margin: 0 auto;
+}
+#top {
+  width: 896px;
+  text-align: center;
+  margin-bottom: 42px;
+}
+#left {
+  width: 526px;
+  position: relative;
+  float: left;
+  clear: both;
+}
+#left p {
+  margin-top: 24px;
+  font-size: 24px;
+}
+#right {
+  width: 342px;
+  position: relative;
+  float: left;
+  margin-left: 22px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background-color: rgba(200, 200, 200, 0.25);
+  text-align: center;
+  padding: 8px 0 8px 0;
+}
+#right p {
+  font-size: 18px;
+}
+#center {
+  width: 896px;
+  clear: left;
+  margin-top: 120px;
+}
+#center p {
+  font-size: 18px;
+}
+#center ul {
+  font-size: 18px;
+}
+#center span.trnl {
+  display: none;
+}
+#center ul.skilllist li {
+  margin-bottom: 8px;
+}
+#center ul.orml li {
+  margin-bottom: 0px;
+}
+#center p.resumeBottom {
+  font-size: 16px;
+  margin-top: 22px;
+}
+#center-portfolio {
+  width: 896px;
+  clear: left;
+  margin-top: 120px;
+  text-align: center;
+}
+#center-portfolio p {
+  font-size: 18px;
+}
+.portsquare {
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin-top: 42px;
+  border: 2px solid #333;
+  border-radius: 3px;
+  padding: 0;
+  -moz-box-shadow: 0px 0px 1px 1px #333;
+  -webkit-box-shadow: 0px 0px 1px 1px #333;
+  box-shadow: 0px 0px 1px 1px #333;
+  position: relative;
+  z-index: 4;
+}
+.portsquare:nth-of-type(2n-1) {
+  margin-left: 110px;
+}
+.portsquare:nth-of-type(2n) {
+  margin-left: 68px;
+}
+.portsquare a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.portsquare a:hover {
+  background: none;
+}
+.portsquare a:hover img {
+  -moz-box-shadow: 0px 0px 3px 3px #222;
+  -webkit-box-shadow: 0px 0px 3px 3px #222;
+  box-shadow: 0px 0px 3px 3px #222;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.portsquare img {
+  width: 300px;
+  height: 300px;
+  z-index: 80;
+}
+.portsquare a div {
+  display: none;
+  height: 240px;
+  padding-top: 60px;
+  position: absolute;
+  text-decoration: none;
+  width: 300px;
+  z-index: 100;
+  background-color: rgba(15, 15, 15, 0.8);
+  color: #fff;
+  text-shadow: #000 0px 0px 20px;
+  font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: bold;
+}
+.portsquare a div p {
+  font: 14px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: normal;
+  text-shadow: #000 0px 0px 20px;
+  text-align: left;
+  margin: 18px;
+}
+#portbottom {
+  margin-top: 42px;
+  float: left;
+  clear: left;
+}
+nav {
+  width: 712px;
+  margin: 0 auto;
+  font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: bold;
+}
+div.navbutton {
+  width: 176px;
+  float: left;
+  text-align: center;
+  height: 48px;
+  border: 1px solid #333;
+  background: #333;
+  color: #ddd;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+div.navbutton a {
+  text-decoration: none;
+  color: #ddd;
+  height: 36px;
+  padding-top: 12px;
+  display: block;
+  outline: none;
+  cursor: pointer;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  background: #333;
+  background: -webkit-gradient(linear, left top, left bottom, from(#383838), to(#303030));
+  background: -moz-linear-gradient(top, #383838, #303030);
+}
+div.navbutton a:hover {
+  border-radius: 0;
+  background: #444;
+  background: -webkit-gradient(linear, left top, left bottom, from(#484848), to(#404040));
+  background: -moz-linear-gradient(top, #484848, #404040);
+}
+div.navbutton a:active {
+  position: relative;
+  top: 1px;
+  height: 35px;
+  color: #ccc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#303030), to(#383838));
+  background: -moz-linear-gradient(top, #303030, #383838);
+}
+#home {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#blog {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#contact {
+  margin-top: 8px;
+}
+#sidebar-nav {
+  width: 176px;
+  margin: 0 auto;
+  font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: bold;
+}
+div.sbbutton {
+  width: 176px;
+  float: left;
+  text-align: center;
+  height: 48px;
+  border: 1px solid #888;
+  background: #aaa;
+  color: #444;
+  -webkit-box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+div.sbbutton a {
+  text-decoration: none;
+  border-radius: 5px;
+  color: #444;
+  height: 36px;
+  padding-top: 12px;
+  display: block;
+  outline: none;
+  cursor: pointer;
+  text-shadow: 0 0.4px 0.4px rgba(0, 0, 0, 0.3);
+  background: #aaa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bbbbbb), to(#a4a4a4));
+  background: -moz-linear-gradient(top, #bbbbbb, #a4a4a4);
+}
+div.sbbutton a:hover {
+  border-radius: 5px;
+  background: #999;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a1a1a1), to(#909090));
+  background: -moz-linear-gradient(top, #a1a1a1, #909090);
+}
+div.sbbutton a:active {
+  position: relative;
+  top: 1px;
+  height: 35px;
+  color: #3f3f3f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a3a3), to(#b5b5b5));
+  background: -moz-linear-gradient(top, #a3a3a3, #b5b5b5);
+}
+#email-s a {
+  font-size: 75%;
+  line-height: 24px;
+}
+h2.resumeSection {
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+footer {
+  width: 896px;
+  text-align: center;
+  margin-top: 340px;
+  height: 24px;
+  color: #aaa;
+  float: left;
+  clear: both;
+}
+footer p {
+  font-family: ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+footer a {
+  color: #888;
+  padding: 0;
+}
+footer a:hover {
+  color: #666;
+  background: none;
+}
+#foot4 {
+  display: none;
+}
+.portsquare.touch {
+  margin-bottom: 216px;
+}
+.porttouch {
+  width: 276px;
+  height: 180px;
+  position: absolute;
+  top: 300px;
+  left: -2px;
+  z-index: 3;
+  border: 2px solid #333;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 0;
+  -moz-box-shadow: 0px 0px 1px 1px #333;
+  -webkit-box-shadow: 0px 0px 1px 1px #333;
+  box-shadow: 0px 0px 1px 1px #333;
+  background-color: rgba(15, 15, 15, 0.8);
+  color: #fff;
+  text-shadow: #000 0px 0px 20px;
+  font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-weight: bold;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.porttouch h4,
+.porttouch p {
+  text-shadow: #000 0px 0px 20px;
+  font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  margin-bottom: 12px;
+}
+#pt1 h4 {
+  margin-top: 36px;
+}
+#pt2 h4 {
+  margin-top: 26px;
+}
+#pt3 h4 {
+  margin-top: 8px;
+}
+#pt4 h4 {
+  margin-top: 18px;
+}
+.bslg-nobreak {
+  display: inline;
+}
+.bslg-break {
+  display: none;
+}
+#buildinglogo {
+  width: 200px;
+  height: 279px;
+  margin: 0 auto;
+  top: 40px;
+  position: relative;
+  float: none;
+  clear: none;
+}
+#lbCenter {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#lbBottomContainer {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#lbNumber {
+  display: none;
+}
+/*		Tablet Layout: 768px.
+		Columns: 8.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    padding: 48px 28px 60px;
+  }
+  hr {
+    margin-bottom: 36px;
+  }
+  #wrap {
+    width: 712px;
+  }
+  #top {
+    width: 712px;
+    margin-bottom: 12px;
+  }
+  #left {
+    width: 434px;
+  }
+  #left p {
+    margin-top: 16px;
+    font-size: 20px;
+  }
+  #right {
+    width: 250px;
+  }
+  #right p {
+    font-size: 16px;
+  }
+  #center {
+    width: 712px;
+  }
+  #center p,
+  #center ul {
+    font-size: 16px;
+  }
+  #center ul.skilllist li {
+    margin-bottom: 4px;
+  }
+  #center p.resumeBottom {
+    font-size: 14px;
+    margin-top: 22px;
+  }
+  #center-portfolio {
+    width: 712px;
+  }
+  #center-portfolio p {
+    font-size: 16px;
+  }
+  .portsquare {
+    margin-top: 36px;
+  }
+  .portsquare:nth-of-type(2n-1) {
+    margin-left: 31px;
+  }
+  .portsquare:nth-of-type(2n) {
+    margin-left: 42px;
+  }
+  footer {
+    width: 712px;
+    margin-top: 330px;
+  }
+  .portsquare.touch {
+    margin-bottom: 216px;
+  }
+  .porttouch {
+    width: 276px;
+    height: 180px;
+    position: absolute;
+    top: 300px;
+    left: -2px;
+    z-index: 3;
+    border: 2px solid #333;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0;
+    -moz-box-shadow: 0px 0px 1px 1px #333;
+    -webkit-box-shadow: 0px 0px 1px 1px #333;
+    box-shadow: 0px 0px 1px 1px #333;
+    background-color: rgba(15, 15, 15, 0.8);
+    color: #fff;
+    text-shadow: #000 0px 0px 20px;
+    font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-weight: bold;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .porttouch h4,
+  .porttouch p {
+    text-shadow: #000 0px 0px 20px;
+    font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    margin-bottom: 12px;
+  }
+  #pt1 h4 {
+    margin-top: 36px;
+  }
+  #pt2 h4 {
+    margin-top: 26px;
+  }
+  #pt3 h4 {
+    margin-top: 22px;
+  }
+  #pt4 h4 {
+    margin-top: 32px;
+  }
+  .bslg-break {
+    display: none;
+  }
+  .bslg-nobreak {
+    display: inline;
+  }
+  #bslg {
+    font-size: 36.8px;
+  }
+}
+/*		Mobile Layout: 320px.
+		Columns: 3.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+@media only screen and (max-width: 767px) {
+  body {
+    padding: 48px 34px 60px;
+  }
+  hr {
+    margin-bottom: 24px;
+  }
+  #wrap {
+    width: 252px;
+  }
+  #top {
+    width: 252px;
+    margin-bottom: 8px;
+  }
+  #left {
+    width: 252px;
+    margin-top: 24px;
+  }
+  #left p {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  #right {
+    width: 252px;
+    margin: 0;
+    margin-top: 32px;
+  }
+  #right p {
+    font-size: 16px;
+  }
+  #center {
+    margin-top: 274px;
+    width: 252px;
+  }
+  #center p,
+  #center ul {
+    font-size: 16px;
+  }
+  #center li {
+    margin-bottom: 16px;
+  }
+  #center span.trnl {
+    display: inline;
+  }
+  #center span.rdash {
+    display: none;
+  }
+  #center ul.skilllist li {
+    margin-bottom: 12px;
+  }
+  #center ul.orml li {
+    margin-bottom: 4px;
+    margin-top: 4px;
+  }
+  nav {
+    width: 176px;
+  }
+  div.navbutton {
+    width: 176px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+  }
+  footer {
+    width: 252px;
+    margin-top: 330px;
+    height: 48px;
+  }
+  #foot2 {
+    display: none;
+  }
+  #foot4 {
+    display: inline;
+  }
+  h1 {
+    font-size: 42px;
+    line-height: 48px;
+    font-family: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  h2 {
+    font-size: 26px;
+    line-height: 36px;
+    font-family: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 30px;
+    font-family: ff-nuvo-web-pro-1,ff-nuvo-web-pro-2, sans-serif;
+  }
+  #center-portfolio {
+    width: 252px;
+    margin-top: 274px;
+  }
+  #center-portfolio p {
+    font-size: 16px;
+  }
+  .portsquare {
+    margin-top: 42px;
+  }
+  .portsquare:nth-of-type(2n-1) {
+    margin-left: -29px;
+  }
+  .portsquare:nth-of-type(2n) {
+    margin-left: -29px;
+  }
+  .portsquare.touch {
+    margin-bottom: 200px;
+  }
+  .porttouch {
+    width: 276px;
+    height: 180px;
+    position: absolute;
+    top: 300px;
+    left: -2px;
+    z-index: 3;
+    border: 2px solid #333;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0;
+    -moz-box-shadow: 0px 0px 1px 1px #333;
+    -webkit-box-shadow: 0px 0px 1px 1px #333;
+    box-shadow: 0px 0px 1px 1px #333;
+    background-color: rgba(15, 15, 15, 0.8);
+    color: #fff;
+    text-shadow: #000 0px 0px 20px;
+    font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-weight: bold;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .porttouch h4,
+  .porttouch p {
+    text-shadow: #000 0px 0px 20px;
+    font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    margin-bottom: 12px;
+  }
+  #pt1 h4 {
+    margin-top: 36px;
+  }
+  #pt2 h4 {
+    margin-top: 26px;
+  }
+  #pt3 h4 {
+    margin-top: 22px;
+  }
+  #pt4 h4 {
+    margin-top: 32px;
+  }
+  .bslg-break {
+    display: inline;
+  }
+  .bslg-nobreak {
+    display: none;
+  }
+  #bslg {
+    font-size: 26px;
+  }
+}
+/*		Wide Mobile Layout: 480px.
+		Columns: 5.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  body {
+    padding: 36px 22px 48px;
+  }
+  #wrap {
+    width: 436px;
+  }
+  #top {
+    width: 436px;
+    margin-bottom: 12px;
+  }
+  #left {
+    width: 250px;
+    margin-top: 0px;
+  }
+  #left p {
+    margin-top: 12px;
+    font-size: 18px;
+  }
+  #right {
+    width: 158px;
+    margin-left: 24px;
+    margin-top: 0px;
+  }
+  #center {
+    width: 436px;
+    margin-top: 160px;
+  }
+  #center p,
+  #center ul {
+    font-size: 18px;
+  }
+  #center ul.orml li {
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+  nav {
+    width: 436px;
+    margin: 0 auto;
+    padding-left: 34px;
+  }
+  div.navbutton {
+    width: 176px;
+    margin-bottom: 8px;
+  }
+  div#home {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  div#portfolio {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  div#resume {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  div#blog {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  footer {
+    width: 436px;
+    margin-top: 330px;
+    height: 24px;
+  }
+  #foot2 {
+    display: inline;
+  }
+  #foot4 {
+    display: none;
+  }
+  #center-portfolio {
+    width: 436px;
+    margin-top: 160px;
+  }
+  #center-portfolio p {
+    font-size: 18px;
+  }
+  .portsquare {
+    margin-top: 42px;
+  }
+  .portsquare:nth-of-type(2n-1) {
+    margin-left: 63px;
+  }
+  .portsquare:nth-of-type(2n) {
+    margin-left: 63px;
+  }
+  #sidebar-nav {
+    width: 176px;
+    margin: 0 auto;
+    font: 24px ubuntu-condensed-1, ubuntu-condensed-2, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-weight: bold;
+  }
+  div.sbbutton {
+    width: 102px;
+    height: 40px;
+    margin-left: 27px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  div.sbbutton a {
+    height: 33px;
+    padding-top: 7px;
+    display: block;
+    outline: none;
+    cursor: pointer;
+    text-shadow: 0 0.4px 0.4px rgba(0, 0, 0, 0.3);
+    background: #aaa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bbbbbb), to(#a4a4a4));
+    background: -moz-linear-gradient(top, #bbbbbb, #a4a4a4);
+  }
+  div.sbbutton a:first-of-type {
+    padding-top: 8px;
+    height: 32px;
+  }
+  div.sbbutton a:hover {
+    border-radius: 5px;
+    background: #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#a1a1a1), to(#909090));
+    background: -moz-linear-gradient(top, #a1a1a1, #909090);
+  }
+  div.sbbutton a:active {
+    position: relative;
+    top: 1px;
+    height: 35px;
+    color: #3f3f3f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#a3a3a3), to(#b5b5b5));
+    background: -moz-linear-gradient(top, #a3a3a3, #b5b5b5);
+  }
+  #email-s a {
+    font-size: 62%;
+  }
+  #phone-s a {
+    font-size: 95%;
+  }
+  #pt3 h4 {
+    margin-top: 8px;
+  }
+  #pt4 h4 {
+    margin-top: 18px;
+  }
+  .bslg-break {
+    display: none;
+  }
+  .bslg-nobreak {
+    display: inline;
+  }
+  #bslg {
+    font-size: 23px;
+  }
+}
